@@ -1,0 +1,27 @@
+<div class="box">
+    <div class="input-box">
+        <h2>Register</h2>
+<form (ngSubmit)="onRegister()">
+  <label for="name">Full Name</label>
+  <input id="name" type="text" [(ngModel)]="userData.fullName" name="name" required />
+  <br /><br />
+
+  <label for="mobileNo">Mobile No</label>
+  <input id="mobileNo" type="text" [(ngModel)]="userData.mobileNo" name="mobileNo" required />
+  <br /><br />
+
+  <label for="email">Email</label>
+  <input id="email" type="email" [(ngModel)]="userData.email" name="email" required />
+  <br /><br />
+
+  <label for="password">Password</label>
+  <input id="password" type="password" [(ngModel)]="userData.password" name="password" required />
+  <br /><br />
+
+  <button type="submit">Register</button>
+</form>
+    </div>
+</div>
+
+
+

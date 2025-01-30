@@ -1,0 +1,25 @@
+.card-header{
+    background: #A294F9;
+    color: #fff;
+}
+
+.card-body{
+    background: #fff;
+}
+
+.card-footer{
+    background: #E5D9F2; 
+    height: 50px;
+}
+
+.card-footer .btn {
+    background: #A294F9;
+    color: #fff; 
+}
+.container {
+    justify-items: center;
+    width: 600px;
+    height: 230px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

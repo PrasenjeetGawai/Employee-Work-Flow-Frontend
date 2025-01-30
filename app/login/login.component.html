@@ -1,0 +1,29 @@
+<router-outlet></router-outlet>
+<div id="box">
+
+
+<div class="container">
+
+<h2>Login</h2>
+<form #f="ngForm" (ngSubmit)="onLogin(f)">
+  <label for="email">Email:</label>
+  <input id="email" type="email" [(ngModel)]="sendData.name" name="email" required />
+  <br /><br />
+
+  <label for="password">Password:</label>
+  <input id="password" type="password" [(ngModel)]="sendData.password" name="password" required />
+  <br /><br />
+
+  <button type="submit">Login</button>
+
+  <div id="register">
+    <a routerLink="register">Register</a>
+  </div>
+
+
+</form>
+
+</div>
+
+</div>
+

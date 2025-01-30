@@ -1,0 +1,62 @@
+<router-outlet></router-outlet>
+<app-header></app-header>
+<br>
+<div class="btn-container">
+    <button class="btn add" routerLink="addemp">+ Add Employee</button>
+    <button (click)="onUpdate()" class="btn update">Update</button>
+    <button (click)="onDelete()" class="btn delete">Delete</button>
+</div>
+<br>
+<div class="container-fluid">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>Action</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Department</th>
+                <th>Created By</th>
+                <th>Created Date</th>
+                <th>Updated Date</th>
+                <th>Salary</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <!-- <tbody>
+            <tr *ngFor="let items of empData;index as i">
+                <td>{{i+1}}</td>
+                <td><input (click)="onRadioClick(items.id)" type="radio" name="record"></td>
+                <td><a [routerLink]="['details',items.id]">{{items.name}}</a></td>
+                <td>
+                    <h5><span [ngClass]="{
+                        'bg-succ':items.status.toLowerCase() == 'active',
+                        'bg-warn':items.status.toLowerCase() == 'inactive',
+                        'bg-dan':items.status.toLowerCase() == 'suspend',
+                }"> {{items.status}}</span></h5>
+                </td>
+                <td>{{items.department}}</td>
+                <td>{{items.createdBy}}</td>
+                <td>{{items.createdDate | date}}</td>
+                <td>{{items.updatedDate | date:"dd-MM-yyyy"}}</td>
+                <td>{{items.salary}}</td>
+                <td>{{items.country.c_name}}</td>
+            </tr>
+        </tbody> -->
+
+        <tbody>
+            <tr *ngFor="let item of empData ; index as i">
+                <td>{{i+1}}</td>
+                <td><input type="radio" (click)="onRadioClick(item.id)" name="record"></td>
+                <td><a [routerLink]="['details',item.id]">{{item.name}}</a></td>
+                <td>{{item.status}}</td>
+                <td>{{item.department}}</td>
+                <td>{{item.createdBy}}</td>
+                <td>{{item.createdDate | date}}</td>
+                <td>{{item.updatedDate | date:"dd-MM-yyyy" }}</td>
+                <td>{{item.salary}}</td>
+                <td>{{item.country.c_name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
